@@ -13,10 +13,12 @@
 		EC73212825E0170D00BB680E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC73212625E0170D00BB680E /* Main.storyboard */; };
 		EC73212A25E0170E00BB680E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC73212925E0170E00BB680E /* Assets.xcassets */; };
 		EC73212D25E0170E00BB680E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC73212B25E0170E00BB680E /* LaunchScreen.storyboard */; };
+		EC73213925E021CD00BB680E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73213825E021CD00BB680E /* Question.swift */; };
+		EC73213E25E0258400BB680E /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73213D25E0258400BB680E /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC73211D25E0170D00BB680E /* AIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC73211D25E0170D00BB680E /* AIOS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIOS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC73212025E0170D00BB680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC73212225E0170D00BB680E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC73212425E0170D00BB680E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		EC73212925E0170E00BB680E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC73212C25E0170E00BB680E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC73212E25E0170E00BB680E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC73213825E021CD00BB680E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		EC73213D25E0258400BB680E /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,7 @@
 		EC73211E25E0170D00BB680E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC73211D25E0170D00BB680E /* AIOS.app */,
+				EC73211D25E0170D00BB680E /* AIOS1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +60,8 @@
 		EC73211F25E0170D00BB680E /* AIOS */ = {
 			isa = PBXGroup;
 			children = (
+				EC73213C25E0257100BB680E /* Answer */,
+				EC73213725E021A500BB680E /* Question */,
 				EC73212025E0170D00BB680E /* AppDelegate.swift */,
 				EC73212225E0170D00BB680E /* SceneDelegate.swift */,
 				EC73212425E0170D00BB680E /* ViewController.swift */,
@@ -67,12 +73,28 @@
 			path = AIOS;
 			sourceTree = "<group>";
 		};
+		EC73213725E021A500BB680E /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				EC73213825E021CD00BB680E /* Question.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		EC73213C25E0257100BB680E /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				EC73213D25E0258400BB680E /* Answer.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC73211C25E0170D00BB680E /* AIOS */ = {
+		EC73211C25E0170D00BB680E /* AIOS1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC73213125E0170E00BB680E /* Build configuration list for PBXNativeTarget "AIOS" */;
+			buildConfigurationList = EC73213125E0170E00BB680E /* Build configuration list for PBXNativeTarget "AIOS1" */;
 			buildPhases = (
 				EC73211925E0170D00BB680E /* Sources */,
 				EC73211A25E0170D00BB680E /* Frameworks */,
@@ -82,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = AIOS;
+			name = AIOS1;
 			productName = AIOS;
-			productReference = EC73211D25E0170D00BB680E /* AIOS.app */;
+			productReference = EC73211D25E0170D00BB680E /* AIOS1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC73211825E0170D00BB680E /* Build configuration list for PBXProject "AIOS" */;
+			buildConfigurationList = EC73211825E0170D00BB680E /* Build configuration list for PBXProject "AIOS1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC73211C25E0170D00BB680E /* AIOS */,
+				EC73211C25E0170D00BB680E /* AIOS1 */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC73212525E0170D00BB680E /* ViewController.swift in Sources */,
+				EC73213925E021CD00BB680E /* Question.swift in Sources */,
+				EC73213E25E0258400BB680E /* Answer.swift in Sources */,
 				EC73212125E0170D00BB680E /* AppDelegate.swift in Sources */,
 				EC73212325E0170D00BB680E /* SceneDelegate.swift in Sources */,
 			);
@@ -320,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC73211825E0170D00BB680E /* Build configuration list for PBXProject "AIOS" */ = {
+		EC73211825E0170D00BB680E /* Build configuration list for PBXProject "AIOS1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC73212F25E0170E00BB680E /* Debug */,
@@ -329,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC73213125E0170E00BB680E /* Build configuration list for PBXNativeTarget "AIOS" */ = {
+		EC73213125E0170E00BB680E /* Build configuration list for PBXNativeTarget "AIOS1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC73213225E0170E00BB680E /* Debug */,
