@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Iql-1f-sM3">
-                                <rect key="frame" x="166" y="418" width="82" height="60"/>
+                                <rect key="frame" x="166" y="403" width="82" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-7J-27c">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
@@ -31,6 +31,13 @@
                                         <state key="normal" title="Результаты"/>
                                         <connections>
                                             <segue destination="IS4-Bq-Tg9" kind="show" identifier="results" id="s2Y-Wf-wub"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQU-2V-amI">
+                                        <rect key="frame" x="0.0" y="60" width="82" height="30"/>
+                                        <state key="normal" title="Настройки"/>
+                                        <connections>
+                                            <segue destination="AeV-ZA-KI1" kind="show" id="aGO-Vp-trg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -91,6 +98,12 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meU-Zd-z3h">
+                                <rect key="frame" x="186.5" y="10" width="41.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MTV-V2-Cth"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,9 +111,12 @@
                             <constraint firstItem="MTV-V2-Cth" firstAttribute="trailing" secondItem="nN0-nM-oRd" secondAttribute="trailing" constant="20" id="1GP-yy-FGV"/>
                             <constraint firstItem="MTV-V2-Cth" firstAttribute="bottom" secondItem="Q4E-A4-fdX" secondAttribute="bottom" constant="46" id="2mV-II-1FZ"/>
                             <constraint firstItem="nN0-nM-oRd" firstAttribute="leading" secondItem="MTV-V2-Cth" secondAttribute="leading" constant="20" id="7Zf-eY-Y4c"/>
+                            <constraint firstItem="meU-Zd-z3h" firstAttribute="centerX" secondItem="elj-9O-NK9" secondAttribute="centerX" id="Aya-mf-kgu"/>
                             <constraint firstItem="MTV-V2-Cth" firstAttribute="trailing" secondItem="Q4E-A4-fdX" secondAttribute="trailing" constant="20" id="DDy-c2-QJe"/>
                             <constraint firstItem="Q4E-A4-fdX" firstAttribute="leading" secondItem="MTV-V2-Cth" secondAttribute="leading" constant="20" id="Ne0-RU-6Ys"/>
+                            <constraint firstItem="nN0-nM-oRd" firstAttribute="top" secondItem="meU-Zd-z3h" secondAttribute="bottom" constant="10" id="OAZ-ts-USb"/>
                             <constraint firstItem="Q4E-A4-fdX" firstAttribute="top" secondItem="nN0-nM-oRd" secondAttribute="bottom" constant="10" id="V3Z-H4-Cto"/>
+                            <constraint firstItem="meU-Zd-z3h" firstAttribute="top" secondItem="MTV-V2-Cth" secondAttribute="top" constant="10" id="png-qc-wcF"/>
                             <constraint firstItem="nN0-nM-oRd" firstAttribute="top" secondItem="MTV-V2-Cth" secondAttribute="top" constant="50" id="zZB-SX-dBR"/>
                         </constraints>
                     </view>
@@ -110,6 +126,7 @@
                         <outlet property="answerB" destination="mUl-w4-p79" id="tbd-DB-GVu"/>
                         <outlet property="answerC" destination="dSr-oR-8mS" id="OeV-ed-fJT"/>
                         <outlet property="answerD" destination="Vfp-UC-q1X" id="Q2e-zb-v3L"/>
+                        <outlet property="currentResultLabel" destination="meU-Zd-z3h" id="zIg-5d-6lt"/>
                         <outlet property="questionText" destination="nN0-nM-oRd" id="Fx5-Sy-Zw9"/>
                     </connections>
                 </viewController>
@@ -170,7 +187,39 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3i-YS-xgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882.60869565217399" y="397.76785714285711"/>
+            <point key="canvasLocation" x="883" y="159"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="wpr-Ss-fLC">
+            <objects>
+                <viewController id="AeV-ZA-KI1" customClass="SettingController" customModule="AIOS1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R6b-Wa-F7N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t4Q-Yf-gD7">
+                                <rect key="frame" x="81.5" y="405.5" width="251" height="32"/>
+                                <segments>
+                                    <segment title="По возрастанию"/>
+                                    <segment title="Рандомно"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xjr-O9-wXe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t4Q-Yf-gD7" firstAttribute="centerY" secondItem="R6b-Wa-F7N" secondAttribute="centerY" id="8PN-94-7ia"/>
+                            <constraint firstItem="t4Q-Yf-gD7" firstAttribute="centerX" secondItem="R6b-Wa-F7N" secondAttribute="centerX" id="pXO-Cv-Gtr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Np-N6-bYz"/>
+                    <connections>
+                        <outlet property="orderQuestion" destination="t4Q-Yf-gD7" id="z5h-TC-xeD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVo-lz-59n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="883"/>
         </scene>
     </scenes>
     <resources>

@@ -9,11 +9,11 @@ import Foundation
 
 class Game {
     private init() {
-//        self.results = []
         self.results = resultCaretaker.retrieveResults()
     }
     static let shared = Game()
     var gameSession: GameSession?
+    var settingOrder: Order = .increas
     let resultCaretaker = ResultCaretaker()
     private (set) var results: [Result] {
         didSet {

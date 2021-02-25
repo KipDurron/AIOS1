@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2A492F25E7DD8300727F38 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A492E25E7DD8300727F38 /* SettingController.swift */; };
 		EC73212125E0170D00BB680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73212025E0170D00BB680E /* AppDelegate.swift */; };
 		EC73212325E0170D00BB680E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73212225E0170D00BB680E /* SceneDelegate.swift */; };
 		EC73212525E0170D00BB680E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73212425E0170D00BB680E /* ViewController.swift */; };
@@ -21,11 +22,16 @@
 		EC73214D25E145CC00BB680E /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73214C25E145CC00BB680E /* GameSession.swift */; };
 		EC73215125E1556D00BB680E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73215025E1556D00BB680E /* ResultViewController.swift */; };
 		EC73215625E1562B00BB680E /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73215525E1562B00BB680E /* ResultCell.swift */; };
+		EC80943825E693B900F71DC6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80943725E693B900F71DC6 /* Order.swift */; };
+		EC80943C25E694CC00F71DC6 /* OrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80943B25E694CC00F71DC6 /* OrderStrategy.swift */; };
+		EC80943F25E6964000F71DC6 /* OrderQuestionIncreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80943E25E6964000F71DC6 /* OrderQuestionIncreas.swift */; };
+		EC80944325E696B200F71DC6 /* OrderQuestionRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80944225E696B200F71DC6 /* OrderQuestionRandom.swift */; };
 		ECC61FA025E5442D00972537 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC61F9F25E5442D00972537 /* Result.swift */; };
 		ECC61FA325E544B100972537 /* ResultCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC61FA225E544B100972537 /* ResultCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC2A492E25E7DD8300727F38 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		EC73211D25E0170D00BB680E /* AIOS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIOS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC73212025E0170D00BB680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC73212225E0170D00BB680E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +48,10 @@
 		EC73214C25E145CC00BB680E /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		EC73215025E1556D00BB680E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EC73215525E1562B00BB680E /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		EC80943725E693B900F71DC6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EC80943B25E694CC00F71DC6 /* OrderStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStrategy.swift; sourceTree = "<group>"; };
+		EC80943E25E6964000F71DC6 /* OrderQuestionIncreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderQuestionIncreas.swift; sourceTree = "<group>"; };
+		EC80944225E696B200F71DC6 /* OrderQuestionRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderQuestionRandom.swift; sourceTree = "<group>"; };
 		ECC61F9F25E5442D00972537 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		ECC61FA225E544B100972537 /* ResultCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +86,7 @@
 		EC73211F25E0170D00BB680E /* AIOS */ = {
 			isa = PBXGroup;
 			children = (
+				EC80943625E6939100F71DC6 /* Setting */,
 				EC73214F25E1555C00BB680E /* Result */,
 				EC73214125E02B6E00BB680E /* Game */,
 				EC73213C25E0257100BB680E /* Answer */,
@@ -127,6 +138,18 @@
 				ECC61FA225E544B100972537 /* ResultCaretaker.swift */,
 			);
 			path = Result;
+			sourceTree = "<group>";
+		};
+		EC80943625E6939100F71DC6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EC80943725E693B900F71DC6 /* Order.swift */,
+				EC80943B25E694CC00F71DC6 /* OrderStrategy.swift */,
+				EC80943E25E6964000F71DC6 /* OrderQuestionIncreas.swift */,
+				EC80944225E696B200F71DC6 /* OrderQuestionRandom.swift */,
+				EC2A492E25E7DD8300727F38 /* SettingController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +226,15 @@
 				EC73214725E0323C00BB680E /* GameService.swift in Sources */,
 				ECC61FA325E544B100972537 /* ResultCaretaker.swift in Sources */,
 				EC73213925E021CD00BB680E /* Question.swift in Sources */,
+				EC80943F25E6964000F71DC6 /* OrderQuestionIncreas.swift in Sources */,
 				EC73215125E1556D00BB680E /* ResultViewController.swift in Sources */,
+				EC80944325E696B200F71DC6 /* OrderQuestionRandom.swift in Sources */,
+				EC80943C25E694CC00F71DC6 /* OrderStrategy.swift in Sources */,
 				EC73215625E1562B00BB680E /* ResultCell.swift in Sources */,
+				EC80943825E693B900F71DC6 /* Order.swift in Sources */,
 				EC73213E25E0258400BB680E /* Answer.swift in Sources */,
 				ECC61FA025E5442D00972537 /* Result.swift in Sources */,
+				EC2A492F25E7DD8300727F38 /* SettingController.swift in Sources */,
 				EC73212125E0170D00BB680E /* AppDelegate.swift in Sources */,
 				EC73214325E02B9100BB680E /* GameViewController.swift in Sources */,
 				EC73212325E0170D00BB680E /* SceneDelegate.swift in Sources */,
