@@ -19,7 +19,21 @@ class GameViewController: UIViewController {
     var currentRightAnswer: Answer?
     var currentQuestion: Question?
     weak var gameDeligate: GameViewControllerDeligate?
-
+    let orderSetting = Game.shared.settingOrder
+    private var orderQuestionStrategy: OrderQuestionStrategy {
+        switch self.orderSetting {
+        case .increas:
+            return OrderQuestionIncreas()
+        case .random:
+            return OrderQuestionRandom()
+        }
+    }
+    
+//    var currentResult: String {
+//
+//    }
+    
+    @IBOutlet weak var currentResultLabel: UILabel!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var answerA: UILabel!
     @IBOutlet weak var answerB: UILabel!
@@ -29,7 +43,9 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.listQuestion = gameService.setupQuestions()
+        currentResultLabel.text = "0"
+        self.notificationCenterSetting()
+        self.listQuestion = orderQuestionStrategy.createQuestion()
         getCurrentQuestion()
         // Do any additional setup after loading the view.
         let tapA = UITapGestureRecognizer(target: self, action: #selector(GameViewController.tapAnswer))
@@ -59,8 +75,8 @@ class GameViewController: UIViewController {
        
         if currentAnswer == self.currentRightAnswer?.rawValue {
             //Верно ответили
-//            Game.shared.gameSession?.countRightAns += 1
             gameDeligate?.degreeRightAns()
+            NotificationCenter.default.post(name: Notification.Name("UpdateResultLabel"), object: nil)
             nextQuestion()
             
         } else {
@@ -71,8 +87,21 @@ class GameViewController: UIViewController {
         
     }
     
+    private func notificationCenterSetting() {
+        NotificationCenter.default
+            .addObserver(self, selector: #selector(updateResult), name: Notification.Name(rawValue: "UpdateResultLabel"), object: nil)
+    }
+    
+    @objc private func updateResult() {
+        self.currentResultLabel.text = String(getPercent())
+    }
+    
+    func getPercent() -> Float {
+        return Float(Game.shared.gameSession!.countRightAns) / Float(Game.shared.gameSession!.countQuestion) * 100
+    }
+    
     private func endGame() {
-        let percent = Float(Game.shared.gameSession!.countRightAns) / Float(Game.shared.gameSession!.countQuestion) * 100
+        let percent = getPercent()
         let newResult = Result(date: Date(), persent: percent)
 //        var results = Game.shared.resultCaretaker.retrieveResults()
 //        results.append(newResult)

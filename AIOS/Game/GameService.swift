@@ -22,6 +22,12 @@ class GameService {
         let options2 = [Answer.A: "A) Достоевский", Answer.B: "B) Мики Рурк", Answer.C: "C) Двенятин", Answer.D: "D) Шпак" ]
         let quest2 = Question(questionText: questionText2, correctAnswer: correctAnswer2, options: options2)
         resturnList.append(quest2)
+        
+        let questionText3 = "кто написал \"Star Wars Наследник империи\" ?"
+        let correctAnswer3 = Answer.D
+        let options3 = [Answer.A: "A) Достоевский", Answer.B: "B) Путин", Answer.C: "C) Щербаков", Answer.D: "D) Тимати Занн" ]
+        let quest3 = Question(questionText: questionText3, correctAnswer: correctAnswer3, options: options3)
+        resturnList.append(quest3)
         return resturnList
     }
     
